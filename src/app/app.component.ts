@@ -20,7 +20,7 @@ export class AppComponent {
   col: string[] = ['id', 'name', 'email', 'website'];
   dataSource = new MatTableDataSource<TableElement>(this.Data);
 
-  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
 
   constructor(private restApiService: RestApiService) {
     this.restApiService.getUsers().subscribe((res) => {
